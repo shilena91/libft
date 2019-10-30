@@ -6,7 +6,7 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/20 13:07:22 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/23 10:19:49 by hopham           ###   ########.fr       */
+/*   Updated: 2019/10/30 11:49:59 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,27 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
+	int		i;
+	int		j;
 
 	if (!s1 || !s2)
 		return (NULL);
-	str = ft_strdup(s1);
+	str = (char*)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (str == NULL)
 		return (NULL);
-	str = ft_strcat(str, s2);
+	i = 0;
+	j = 0;
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		str[i] = s2[j];
+		i++;
+		j++;
+	}
+	str[i] = '\0';
 	return (str);
 }
