@@ -6,7 +6,7 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 13:26:06 by hopham            #+#    #+#             */
-/*   Updated: 2019/12/18 12:01:45 by hopham           ###   ########.fr       */
+/*   Updated: 2020/01/02 15:14:48 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,6 @@ t_printf		*display_p(t_printf *list);
 t_printf		*display_f(t_printf *list);
 t_printf		*display_other(t_printf *list);
 t_printf		*display_all(t_printf *list);
-char			*ft_itoa_base(uintmax_t num, int base, char c);
-char			*ft_ftoa(long double f, int precision, int dot);
 void			display_exception_char(char c, t_printf *list);
 char			get_sign(t_printf *list, double nb);
 void			ft_putnbrmax_fd(uintmax_t n, int fd);

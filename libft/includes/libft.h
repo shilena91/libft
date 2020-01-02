@@ -6,7 +6,7 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 10:17:25 by hopham            #+#    #+#             */
-/*   Updated: 2019/12/11 16:16:52 by hopham           ###   ########.fr       */
+/*   Updated: 2020/01/02 15:13:14 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(intmax_t n, int fd);
 char				*ft_itoa(intmax_t n);
+char				*ft_itoa_base(uintmax_t num, int base, char c);
+char				*ft_ftoa(long double f, int precision, int dot);
 char				**ft_strsplitcharset(char *str, const char *charset);
 
 #endif

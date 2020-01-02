@@ -6,11 +6,11 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/10 11:00:22 by hopham            #+#    #+#             */
-/*   Updated: 2019/12/18 12:19:25 by hopham           ###   ########.fr       */
+/*   Updated: 2020/01/02 15:12:20 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static long double	rounding(int precision, long double f)
 {
