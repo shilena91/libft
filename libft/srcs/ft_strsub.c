@@ -6,7 +6,7 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 12:41:45 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/23 10:47:52 by hopham           ###   ########.fr       */
+/*   Updated: 2019/10/30 10:45:18 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		str[i] = s[start];
+		str[i] = s[start + i];
 		i++;
-		start++;
 	}
 	str[i] = '\0';
 	return (str);

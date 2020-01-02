@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/21 09:23:54 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/23 17:54:31 by hopham           ###   ########.fr       */
+/*   Created: 2019/11/08 17:48:15 by hopham            #+#    #+#             */
+/*   Updated: 2019/11/08 18:59:13 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Outputs the integer n to the file descriptor fd.
-*/
-
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstrev(t_list **list)
 {
-	long	nb;
+	t_list	*pre;
+	t_list	*cur;
+	t_list	*next;
 
-	nb = n;
-	if (nb == -2147483648)
+	pre = NULL;
+	cur = *list;
+	while (cur)
 	{
-		ft_putstr_fd("-2147483648", fd);
-		return ;
+		next = cur->next;
+		cur->next = pre;
+		pre = cur;
+		cur = next;
 	}
-	if (nb < 0)
-	{
-		ft_putchar_fd('-', fd);
-		nb = -n;
-	}
-	if (nb < 10)
-	{
-		ft_putchar_fd(nb + '0', fd);
-		return ;
-	}
-	ft_putnbr_fd(nb / 10, fd);
-	ft_putnbr_fd(nb % 10, fd);
+	*list = pre;
 }

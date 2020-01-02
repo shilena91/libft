@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   treatment.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 10:08:13 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/30 12:28:40 by hopham           ###   ########.fr       */
+/*   Created: 2019/12/02 17:23:39 by hopham            #+#    #+#             */
+/*   Updated: 2019/12/10 17:53:59 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "ft_printf.h"
 
-# include <fcntl.h>
-# include <unistd.h>
-# include "libft.h"
-
-# define BUFF_SIZE 32
-# define MAX_FD 4864
-
-int	get_next_line(const int fd, char **line);
-
-#endif
+int	treatment(t_printf *list)
+{
+	list->i++;
+	parse_convert(list);
+	parse_field_width(list);
+	parse_precision(list);
+	parse_len_mod(list);
+	parse_specifier(list);
+	display_all(list);
+	return (list->len);
+}

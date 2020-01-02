@@ -6,7 +6,7 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 16:08:38 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/24 16:56:08 by hopham           ###   ########.fr       */
+/*   Updated: 2019/10/30 13:54:45 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,3 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return ((int)(*str1 - *str2));
 }
-
-

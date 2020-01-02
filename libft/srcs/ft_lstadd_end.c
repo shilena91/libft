@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_end.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: hopham <pham.hoang1591@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 10:20:14 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/23 17:50:32 by hopham           ###   ########.fr       */
+/*   Created: 2019/11/05 16:35:27 by hopham            #+#    #+#             */
+/*   Updated: 2019/11/05 16:36:50 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+void	ft_lstadd_end(t_list **alst, t_list *new)
 {
-	ft_putnbr_fd(nb, 1);
+	t_list	*elem;
+
+	elem = *alst;
+	while (elem->next)
+		elem = elem->next;
+	elem->next = new;
+	return ;
 }

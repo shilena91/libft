@@ -6,7 +6,7 @@
 /*   By: hopham <hopham@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 10:17:25 by hopham            #+#    #+#             */
-/*   Updated: 2019/10/23 16:36:39 by hopham           ###   ########.fr       */
+/*   Updated: 2019/12/11 16:16:52 by hopham           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,12 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_lstadd_end(t_list **alst, t_list *new);
+size_t				ft_lstcount(t_list *list);
+void				ft_lstrev(t_list **list);
 
 void				ft_putchar(char c);
-void				ft_putnbr(int nb);
+void				ft_putnbr(intmax_t nb);
 void				ft_putstr(const char *str);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -85,12 +88,13 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+char				*ft_strndup(const char *s1, size_t n);
 void				ft_putendl(char const *s);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
-char				*ft_itoa(int n);
+void				ft_putnbr_fd(intmax_t n, int fd);
+char				*ft_itoa(intmax_t n);
 char				**ft_strsplitcharset(char *str, const char *charset);
 
 #endif
